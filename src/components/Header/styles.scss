@@ -1,0 +1,16 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    span {
+        color: #0E103C;
+        font-size: 36px;
+    }
+}
+
+.title_space {
+    width: 100%;
+    height: 100px;
+}
