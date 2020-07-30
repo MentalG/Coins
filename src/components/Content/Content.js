@@ -1,4 +1,5 @@
 import React from 'react'
+import Coin from '../Coin'
 import './styles.scss'
 
 const Content = () => {
@@ -7,15 +8,15 @@ const Content = () => {
             <div className='content'>
                 <span className='content_title'>Available Tokens</span>
                 <div className='wrapper'>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
-                    <div className='coin'>Coin</div>
+                    <Coin />
+                    <Coin />
+                    <Coin />
+                    <Coin />
+                    <Coin />
+                    <Coin />
+                    <Coin />
+                    <Coin />
+                    <Coin />
                 </div>
             </div>
         </div>
