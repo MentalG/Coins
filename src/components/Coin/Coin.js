@@ -1,23 +1,32 @@
 import React from 'react';
-import image from '../../images/eth.png';
 import './styles.scss';
 
-const Coin = () => {
-  return <div className='coin'>
+const Coin = (props) => {
+  console.log(props);
+  const { name, color, image, price, price_change_24 } = props;
+
+  return (
+    <div
+      className='coin'
+      style={{
+        background: `linear-gradient(rgb(${color[0]}) 0%, rgb(${color[1]}) 100%`,
+      }}
+    >
       <div className='coin_top'>
-      <div className='coin_top_left'>
-          <span className='coin_name'>ETH</span>
-          <span className='coin_price'>$327.05</span>
-          <span className='coin_change'>+1.43% in last 24h</span>
-      </div>
-      <div className='coin_top_right'></div>
+        <div className='coin_top_left'>
+          <span className='coin_name'>{name.toUpperCase()}</span>
+          <span className='coin_price'>{price}</span>
+          <span className='coin_change'>{price_change_24}% in last 24h</span>
+        </div>
+        <div className='coin_top_right'></div>
       </div>
       <div className='coin_button'>
-          <picture>
-              <img src={image} alt={'eth'}/>
-          </picture>
+        <picture>
+          <img src={image} alt={name}/>
+        </picture>
       </div>
-  </div>;
+    </div>
+  );
 };
 
 export default Coin;
