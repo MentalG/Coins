@@ -8,7 +8,6 @@ import {
   ETH,
   KNC,
   LINK,
-  MANA,
   MKR,
   NMR,
   REN,

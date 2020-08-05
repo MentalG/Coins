@@ -11,17 +11,20 @@ const Content = () => {
     const coinService = new CoinService();
 
     useEffect(() => {
-        (async () => {
+        const fetchData = async () => {
             try {
                 coins.map(async (item) => {
                     const response = await coinService.getCoin(item.id);
-                    setData(prevState => prevState.concat(dumpCoin(item, response)));
+                    setData((prevState) => [...prevState, dumpCoin(item, response)]);
                 })
             } catch (error) {
                 console.error(error);
             }
-        })();
-    },[]);
+        }
+
+        fetchData()
+        // eslint-disable-next-line
+    }, []);
 
 
     return (

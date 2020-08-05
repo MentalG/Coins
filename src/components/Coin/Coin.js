@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.scss';
 
 const Coin = (props) => {
-  console.log(props);
   const { name, color, image, price, price_change_24 } = props;
 
   return (
